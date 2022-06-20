@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Class</title>
+    </head>
+
+    <body>
+        <script>
+            var script = document.createElement("script");
+            script.type = "text/javascript";
+        
+            script.addEventListener("load", function (event) {
+            const config = {
+                name: "Demo User",
+                meetingId: "milkyway",
+                apiKey: "7c4b8c34-a99a-4986-9046-8a3f4306b44e",
+
+                ////// newly added features ////
+                maxResolution: "hd", // "sd" or "hd"
+                participantCanLeave: true,
+                redirectOnLeave: "../student/student.php",
+                raiseHandEnabled: true,
+
+                branding: {
+                    enabled: true,
+                    logoURL:
+                    "https://static.videosdk.live/videosdk.live/videosdk_logo_circle_big.png",
+                    name: "Prebuilt",
+                    poweredBy: false,
+                },
+
+
+        
+                containerId: null,
+        
+                micEnabled: true,
+                webcamEnabled: true,
+                participantCanToggleSelfWebcam: true,
+                participantCanToggleSelfMic: true,
+        
+                chatEnabled: true,
+                screenShareEnabled: true,
+        
+                /*
+        
+                Other Feature Properties 
+                
+                */
+            };
+        
+            const meeting = new VideoSDKMeeting();
+            meeting.init(config);
+            });
+        
+            script.src =
+            "https://sdk.videosdk.live/rtc-js-prebuilt/0.3.3/rtc-js-prebuilt.js";
+            document.getElementsByTagName("head")[0].appendChild(script);
+        </script>
+        
+    </body>
+</html>

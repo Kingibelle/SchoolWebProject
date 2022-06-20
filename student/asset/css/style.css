@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h4{
+    text-align: center;
+}
+h3{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+#myregisterbtn{
+    padding: 8px 16px;
+    background-color: blue;
+    color: white;
+    transition: 0.9s ease;
+}
+#myregisterbtn:hover{
+    cursor: pointer;
+    background-color: green;
+    color: white;
+}
